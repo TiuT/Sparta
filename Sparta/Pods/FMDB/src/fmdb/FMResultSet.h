@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "sqlite3.h"
 
 #ifndef __has_feature      // Optional.
 #define __has_feature(x) 0 // Compatibility with non-clang compilers.
@@ -73,7 +74,7 @@
 
 /** Retrieve next row for result set.
  
- You must always invoke `next` or `nextWithError` before attempting to access the values returned in a query, even if you're only expecting one.
+ You must always invoke `next` before attempting to access the values returned in a query, even if you're only expecting one.
 
  @return `YES` if row successfully retrieved; `NO` if end of result set reached
  
@@ -81,19 +82,6 @@
  */
 
 - (BOOL)next;
-
-/** Retrieve next row for result set.
- 
-  You must always invoke `next` or `nextWithError` before attempting to access the values returned in a query, even if you're only expecting one.
- 
- @param outErr A 'NSError' object to receive any error object (if any).
- 
- @return 'YES' if row successfully retrieved; 'NO' if end of result set reached
- 
- @see hasAnotherRow
- */
-
-- (BOOL)nextWithError:(NSError **)outErr;
 
 /** Did the last call to `<next>` succeed in retrieving another row?
 

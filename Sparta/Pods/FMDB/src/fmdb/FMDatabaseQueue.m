@@ -9,12 +9,6 @@
 #import "FMDatabaseQueue.h"
 #import "FMDatabase.h"
 
-#if FMDB_SQLITE_STANDALONE
-#import <sqlite3/sqlite3.h>
-#else
-#import <sqlite3.h>
-#endif
-
 /*
  
  Note: we call [self retain]; before using dispatch_sync, just incase 
@@ -57,7 +51,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
     return [FMDatabase class];
 }
 
-- (instancetype)initWithPath:(NSString*)aPath flags:(int)openFlags vfs:(NSString *)vfsName {
+- (instancetype)initWithPath:(NSString*)aPath flags:(int)openFlags {
     
     self = [super init];
     
@@ -67,7 +61,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
         FMDBRetain(_db);
         
 #if SQLITE_VERSION_NUMBER >= 3005000
-        BOOL success = [_db openWithFlags:openFlags vfs:vfsName];
+        BOOL success = [_db openWithFlags:openFlags];
 #else
         BOOL success = [_db open];
 #endif
@@ -87,14 +81,10 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
     return self;
 }
 
-- (instancetype)initWithPath:(NSString*)aPath flags:(int)openFlags {
-    return [self initWithPath:aPath flags:openFlags vfs:nil];
-}
-
 - (instancetype)initWithPath:(NSString*)aPath {
     
     // default flags for sqlite3_open
-    return [self initWithPath:aPath flags:SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE vfs:nil];
+    return [self initWithPath:aPath flags:SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE];
 }
 
 - (instancetype)init {
@@ -118,10 +108,10 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
 
 - (void)close {
     FMDBRetain(self);
-    dispatch_sync(_queue, ^() {
-        [self->_db close];
+    dispatch_sync(_queue, ^() { 
+        [_db close];
         FMDBRelease(_db);
-        self->_db = 0x00;
+        _db = 0x00;
     });
     FMDBRelease(self);
 }
@@ -133,7 +123,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
 #if SQLITE_VERSION_NUMBER >= 3005000
         BOOL success = [_db openWithFlags:_openFlags];
 #else
-        BOOL success = [_db open];
+        BOOL success = [db open];
 #endif
         if (!success) {
             NSLog(@"FMDatabaseQueue could not reopen database for path %@", _path);
@@ -162,7 +152,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
         if ([db hasOpenResultSets]) {
             NSLog(@"Warning: there is at least one open result set around after performing [FMDatabaseQueue inDatabase:]");
             
-#if defined(DEBUG) && DEBUG
+#ifdef DEBUG
             NSSet *openSetCopy = FMDBReturnAutoreleased([[db valueForKey:@"_openResultSets"] copy]);
             for (NSValue *rsInWrappedInATastyValueMeal in openSetCopy) {
                 FMResultSet *rs = (FMResultSet *)[rsInWrappedInATastyValueMeal pointerValue];
@@ -210,8 +200,9 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
     [self beginTransaction:NO withBlock:block];
 }
 
-- (NSError*)inSavePoint:(void (^)(FMDatabase *db, BOOL *rollback))block {
 #if SQLITE_VERSION_NUMBER >= 3007000
+- (NSError*)inSavePoint:(void (^)(FMDatabase *db, BOOL *rollback))block {
+    
     static unsigned long savePointIdx = 0;
     __block NSError *err = 0x00;
     FMDBRetain(self);
@@ -235,11 +226,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
     });
     FMDBRelease(self);
     return err;
-#else
-    NSString *errorMessage = NSLocalizedString(@"Save point functions require SQLite 3.7", nil);
-    if (self.logsErrors) NSLog(@"%@", errorMessage);
-    return [NSError errorWithDomain:@"FMDatabase" code:0 userInfo:@{NSLocalizedDescriptionKey : errorMessage}];
-#endif
 }
+#endif
 
 @end
