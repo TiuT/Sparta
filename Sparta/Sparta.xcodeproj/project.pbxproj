@@ -411,11 +411,6 @@
 				9B6860141DAB3E06001EC9FF /* SPVC */,
 				9B685FFD1DAB385F001EC9FF /* Model */,
 				9B685FEE1DAA4F5F001EC9FF /* Common */,
-				9BA553E41D9E31EE0043E97E /* Main.storyboard */,
-				9BA553EA1D9E31EE0043E97E /* Assets.xcassets */,
-				9BA553EC1D9E31EE0043E97E /* LaunchScreen.storyboard */,
-				9BA553EF1D9E31EE0043E97E /* Info.plist */,
-				9BA553E71D9E31EE0043E97E /* Sparta.xcdatamodeld */,
 				9BA553DB1D9E31EE0043E97E /* Supporting Files */,
 			);
 			path = Sparta;
@@ -424,6 +419,11 @@
 		9BA553DB1D9E31EE0043E97E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9BA553E41D9E31EE0043E97E /* Main.storyboard */,
+				9BA553EA1D9E31EE0043E97E /* Assets.xcassets */,
+				9BA553EC1D9E31EE0043E97E /* LaunchScreen.storyboard */,
+				9BA553EF1D9E31EE0043E97E /* Info.plist */,
+				9BA553E71D9E31EE0043E97E /* Sparta.xcdatamodeld */,
 				9BA553DC1D9E31EE0043E97E /* main.m */,
 			);
 			name = "Supporting Files";
