@@ -21,6 +21,7 @@
 		9B68603E1DAB3E06001EC9FF /* SPSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860301DAB3E06001EC9FF /* SPSubscribeViewController.m */; };
 		9B68603F1DAB3E06001EC9FF /* SPTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860351DAB3E06001EC9FF /* SPTopicViewController.m */; };
 		9B6860441DAB464D001EC9FF /* OptEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860431DAB464D001EC9FF /* OptEntity.m */; };
+		9B85CC701DAC894A00E347B9 /* SPHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC6F1DAC894A00E347B9 /* SPHttp.m */; };
 		9BA553E61D9E31EE0043E97E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA553E41D9E31EE0043E97E /* Main.storyboard */; };
 		9BA553E91D9E31EE0043E97E /* Sparta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BA553E71D9E31EE0043E97E /* Sparta.xcdatamodeld */; };
 		9BA553EB1D9E31EE0043E97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA553EA1D9E31EE0043E97E /* Assets.xcassets */; };
@@ -33,7 +34,6 @@
 		71F3C358BDCD58D1399160BB /* Pods-Sparta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sparta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sparta/Pods-Sparta.debug.xcconfig"; sourceTree = "<group>"; };
 		9B685FF01DAA4FCE001EC9FF /* StatisticInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticInfo.h; sourceTree = "<group>"; };
 		9B685FF11DAA4FCE001EC9FF /* StatisticInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticInfo.m; sourceTree = "<group>"; };
-		9B685FF41DAA5051001EC9FF /* MainDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainDef.h; sourceTree = "<group>"; };
 		9B6860011DAB385F001EC9FF /* SPDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDBManager.h; sourceTree = "<group>"; };
 		9B6860021DAB385F001EC9FF /* SPDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDBManager.m; sourceTree = "<group>"; };
 		9B6860061DAB385F001EC9FF /* BaseDBDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBDao.h; sourceTree = "<group>"; };
@@ -60,6 +60,10 @@
 		9B6860351DAB3E06001EC9FF /* SPTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTopicViewController.m; sourceTree = "<group>"; };
 		9B6860421DAB464D001EC9FF /* OptEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptEntity.h; sourceTree = "<group>"; };
 		9B6860431DAB464D001EC9FF /* OptEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptEntity.m; sourceTree = "<group>"; };
+		9B85CC6B1DAC894A00E347B9 /* MainDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDef.h; sourceTree = "<group>"; };
+		9B85CC6E1DAC894A00E347B9 /* SPHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHttp.h; sourceTree = "<group>"; };
+		9B85CC6F1DAC894A00E347B9 /* SPHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHttp.m; sourceTree = "<group>"; };
+		9B85CC711DAC96B000E347B9 /* SPUrlDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUrlDef.h; sourceTree = "<group>"; };
 		9BA553D81D9E31EE0043E97E /* Sparta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sparta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA553DC1D9E31EE0043E97E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BA553E51D9E31EE0043E97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +97,8 @@
 		9B685FEE1DAA4F5F001EC9FF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				9B685FF31DAA502F001EC9FF /* CmdDef */,
+				9B85CC6A1DAC894A00E347B9 /* ComDef */,
+				9B85CC6C1DAC894A00E347B9 /* ComUtils */,
 				9B685FEF1DAA4FCE001EC9FF /* StatisticsInterface */,
 			);
 			path = Common;
@@ -106,15 +111,6 @@
 				9B685FF11DAA4FCE001EC9FF /* StatisticInfo.m */,
 			);
 			path = StatisticsInterface;
-			sourceTree = "<group>";
-		};
-		9B685FF31DAA502F001EC9FF /* CmdDef */ = {
-			isa = PBXGroup;
-			children = (
-				9B685FF41DAA5051001EC9FF /* MainDef.h */,
-			);
-			name = CmdDef;
-			path = CommonUtils/CmdDef;
 			sourceTree = "<group>";
 		};
 		9B685FFD1DAB385F001EC9FF /* Model */ = {
@@ -365,6 +361,32 @@
 			path = OpEntity;
 			sourceTree = "<group>";
 		};
+		9B85CC6A1DAC894A00E347B9 /* ComDef */ = {
+			isa = PBXGroup;
+			children = (
+				9B85CC6B1DAC894A00E347B9 /* MainDef.h */,
+				9B85CC711DAC96B000E347B9 /* SPUrlDef.h */,
+			);
+			path = ComDef;
+			sourceTree = "<group>";
+		};
+		9B85CC6C1DAC894A00E347B9 /* ComUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9B85CC6D1DAC894A00E347B9 /* http */,
+			);
+			path = ComUtils;
+			sourceTree = "<group>";
+		};
+		9B85CC6D1DAC894A00E347B9 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				9B85CC6E1DAC894A00E347B9 /* SPHttp.h */,
+				9B85CC6F1DAC894A00E347B9 /* SPHttp.m */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
 		9BA553CF1D9E31EE0043E97E = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +566,7 @@
 				9B68603B1DAB3E06001EC9FF /* SPTabBarController.m in Sources */,
 				9B68603D1DAB3E06001EC9FF /* SPMeViewController.m in Sources */,
 				9B68600C1DAB385F001EC9FF /* SPDBManager.m in Sources */,
+				9B85CC701DAC894A00E347B9 /* SPHttp.m in Sources */,
 				9B6860381DAB3E06001EC9FF /* AppDelegate.m in Sources */,
 				9B685FF21DAA4FCE001EC9FF /* StatisticInfo.m in Sources */,
 				9B68600D1DAB385F001EC9FF /* BaseDBDao.m in Sources */,
