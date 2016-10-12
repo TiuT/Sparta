@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
+#import "RxWebViewNavigationViewController.h"
 
-@interface SPNavigationController : UINavigationController
+@interface SPNavigationController : RxWebViewNavigationViewController
 
 @end
