@@ -13,6 +13,7 @@
 		9B68600E1DAB385F001EC9FF /* OptDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B68600A1DAB385F001EC9FF /* OptDao.m */; };
 		9B6860371DAB3E06001EC9FF /* SPFoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860181DAB3E06001EC9FF /* SPFoundViewController.m */; };
 		9B6860381DAB3E06001EC9FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B68601C1DAB3E06001EC9FF /* AppDelegate.m */; };
+		9B6860391DAB3E06001EC9FF /* UIImage+SPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B68601F1DAB3E06001EC9FF /* UIImage+SPExtension.m */; };
 		9B68603A1DAB3E06001EC9FF /* SPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860221DAB3E06001EC9FF /* SPNavigationController.m */; };
 		9B68603B1DAB3E06001EC9FF /* SPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860241DAB3E06001EC9FF /* SPTabBarController.m */; };
 		9B68603C1DAB3E06001EC9FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860251DAB3E06001EC9FF /* main.m */; };
@@ -21,14 +22,6 @@
 		9B68603F1DAB3E06001EC9FF /* SPTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860351DAB3E06001EC9FF /* SPTopicViewController.m */; };
 		9B6860441DAB464D001EC9FF /* OptEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B6860431DAB464D001EC9FF /* OptEntity.m */; };
 		9B85CC701DAC894A00E347B9 /* SPHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC6F1DAC894A00E347B9 /* SPHttp.m */; };
-		9B85CC741DAE09C900E347B9 /* SPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC731DAE09C900E347B9 /* SPWebViewController.m */; };
-		9B85CC851DAE362A00E347B9 /* UIImage+SPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC771DAE362A00E347B9 /* UIImage+SPExtension.m */; };
-		9B85CC861DAE362A00E347B9 /* backItemImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B85CC7A1DAE362A00E347B9 /* backItemImage@2x.png */; };
-		9B85CC871DAE362A00E347B9 /* backItemImage_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B85CC7B1DAE362A00E347B9 /* backItemImage_hl@2x.png */; };
-		9B85CC881DAE362A00E347B9 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC7E1DAE362A00E347B9 /* NJKWebViewProgress.m */; };
-		9B85CC891DAE362A00E347B9 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC801DAE362A00E347B9 /* NJKWebViewProgressView.m */; };
-		9B85CC8A1DAE362A00E347B9 /* RxWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC821DAE362A00E347B9 /* RxWebViewController.m */; };
-		9B85CC8B1DAE362A00E347B9 /* RxWebViewNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B85CC841DAE362A00E347B9 /* RxWebViewNavigationViewController.m */; };
 		9BA553E61D9E31EE0043E97E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA553E41D9E31EE0043E97E /* Main.storyboard */; };
 		9BA553E91D9E31EE0043E97E /* Sparta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BA553E71D9E31EE0043E97E /* Sparta.xcdatamodeld */; };
 		9BA553EB1D9E31EE0043E97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA553EA1D9E31EE0043E97E /* Assets.xcassets */; };
@@ -51,6 +44,8 @@
 		9B6860181DAB3E06001EC9FF /* SPFoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFoundViewController.m; sourceTree = "<group>"; };
 		9B68601B1DAB3E06001EC9FF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9B68601C1DAB3E06001EC9FF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9B68601E1DAB3E06001EC9FF /* UIImage+SPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SPExtension.h"; sourceTree = "<group>"; };
+		9B68601F1DAB3E06001EC9FF /* UIImage+SPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SPExtension.m"; sourceTree = "<group>"; };
 		9B6860211DAB3E06001EC9FF /* SPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPNavigationController.h; sourceTree = "<group>"; };
 		9B6860221DAB3E06001EC9FF /* SPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPNavigationController.m; sourceTree = "<group>"; };
 		9B6860231DAB3E06001EC9FF /* SPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTabBarController.h; sourceTree = "<group>"; };
@@ -69,20 +64,6 @@
 		9B85CC6E1DAC894A00E347B9 /* SPHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPHttp.h; sourceTree = "<group>"; };
 		9B85CC6F1DAC894A00E347B9 /* SPHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPHttp.m; sourceTree = "<group>"; };
 		9B85CC711DAC96B000E347B9 /* SPUrlDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPUrlDef.h; sourceTree = "<group>"; };
-		9B85CC721DAE09C900E347B9 /* SPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWebViewController.h; sourceTree = "<group>"; };
-		9B85CC731DAE09C900E347B9 /* SPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWebViewController.m; sourceTree = "<group>"; };
-		9B85CC761DAE362A00E347B9 /* UIImage+SPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SPExtension.h"; sourceTree = "<group>"; };
-		9B85CC771DAE362A00E347B9 /* UIImage+SPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SPExtension.m"; sourceTree = "<group>"; };
-		9B85CC7A1DAE362A00E347B9 /* backItemImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backItemImage@2x.png"; sourceTree = "<group>"; };
-		9B85CC7B1DAE362A00E347B9 /* backItemImage_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backItemImage_hl@2x.png"; sourceTree = "<group>"; };
-		9B85CC7D1DAE362A00E347B9 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
-		9B85CC7E1DAE362A00E347B9 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
-		9B85CC7F1DAE362A00E347B9 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
-		9B85CC801DAE362A00E347B9 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
-		9B85CC811DAE362A00E347B9 /* RxWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxWebViewController.h; sourceTree = "<group>"; };
-		9B85CC821DAE362A00E347B9 /* RxWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxWebViewController.m; sourceTree = "<group>"; };
-		9B85CC831DAE362A00E347B9 /* RxWebViewNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxWebViewNavigationViewController.h; sourceTree = "<group>"; };
-		9B85CC841DAE362A00E347B9 /* RxWebViewNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxWebViewNavigationViewController.m; sourceTree = "<group>"; };
 		9BA553D81D9E31EE0043E97E /* Sparta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sparta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA553DC1D9E31EE0043E97E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BA553E51D9E31EE0043E97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,8 +97,6 @@
 		9B685FEE1DAA4F5F001EC9FF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				9B85CC751DAE362A00E347B9 /* Category */,
-				9B85CC781DAE362A00E347B9 /* Controller */,
 				9B85CC6A1DAC894A00E347B9 /* ComDef */,
 				9B85CC6C1DAC894A00E347B9 /* ComUtils */,
 				9B685FEF1DAA4FCE001EC9FF /* StatisticsInterface */,
@@ -255,11 +234,21 @@
 			children = (
 				9B68601B1DAB3E06001EC9FF /* AppDelegate.h */,
 				9B68601C1DAB3E06001EC9FF /* AppDelegate.m */,
+				9B68601D1DAB3E06001EC9FF /* Category */,
 				9B6860201DAB3E06001EC9FF /* Controller */,
 				9B6860251DAB3E06001EC9FF /* main.m */,
 				9B6860261DAB3E06001EC9FF /* PrefixHeader.pch */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9B68601D1DAB3E06001EC9FF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9B68601E1DAB3E06001EC9FF /* UIImage+SPExtension.h */,
+				9B68601F1DAB3E06001EC9FF /* UIImage+SPExtension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		9B6860201DAB3E06001EC9FF /* Controller */ = {
@@ -269,8 +258,6 @@
 				9B6860221DAB3E06001EC9FF /* SPNavigationController.m */,
 				9B6860231DAB3E06001EC9FF /* SPTabBarController.h */,
 				9B6860241DAB3E06001EC9FF /* SPTabBarController.m */,
-				9B85CC721DAE09C900E347B9 /* SPWebViewController.h */,
-				9B85CC731DAE09C900E347B9 /* SPWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -400,50 +387,6 @@
 			path = http;
 			sourceTree = "<group>";
 		};
-		9B85CC751DAE362A00E347B9 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				9B85CC761DAE362A00E347B9 /* UIImage+SPExtension.h */,
-				9B85CC771DAE362A00E347B9 /* UIImage+SPExtension.m */,
-			);
-			name = Category;
-			path = ComUtils/Category;
-			sourceTree = "<group>";
-		};
-		9B85CC781DAE362A00E347B9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9B85CC791DAE362A00E347B9 /* RxWebViewController */,
-			);
-			name = Controller;
-			path = ComUtils/Controller;
-			sourceTree = "<group>";
-		};
-		9B85CC791DAE362A00E347B9 /* RxWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9B85CC7A1DAE362A00E347B9 /* backItemImage@2x.png */,
-				9B85CC7B1DAE362A00E347B9 /* backItemImage_hl@2x.png */,
-				9B85CC7C1DAE362A00E347B9 /* NJKWebViewProgress */,
-				9B85CC811DAE362A00E347B9 /* RxWebViewController.h */,
-				9B85CC821DAE362A00E347B9 /* RxWebViewController.m */,
-				9B85CC831DAE362A00E347B9 /* RxWebViewNavigationViewController.h */,
-				9B85CC841DAE362A00E347B9 /* RxWebViewNavigationViewController.m */,
-			);
-			path = RxWebViewController;
-			sourceTree = "<group>";
-		};
-		9B85CC7C1DAE362A00E347B9 /* NJKWebViewProgress */ = {
-			isa = PBXGroup;
-			children = (
-				9B85CC7D1DAE362A00E347B9 /* NJKWebViewProgress.h */,
-				9B85CC7E1DAE362A00E347B9 /* NJKWebViewProgress.m */,
-				9B85CC7F1DAE362A00E347B9 /* NJKWebViewProgressView.h */,
-				9B85CC801DAE362A00E347B9 /* NJKWebViewProgressView.m */,
-			);
-			path = NJKWebViewProgress;
-			sourceTree = "<group>";
-		};
 		9BA553CF1D9E31EE0043E97E = {
 			isa = PBXGroup;
 			children = (
@@ -555,8 +498,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B85CC861DAE362A00E347B9 /* backItemImage@2x.png in Resources */,
-				9B85CC871DAE362A00E347B9 /* backItemImage_hl@2x.png in Resources */,
 				9BA553EE1D9E31EE0043E97E /* LaunchScreen.storyboard in Resources */,
 				9BA553EB1D9E31EE0043E97E /* Assets.xcassets in Resources */,
 				9BA553E61D9E31EE0043E97E /* Main.storyboard in Resources */,
@@ -618,27 +559,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6860391DAB3E06001EC9FF /* UIImage+SPExtension.m in Sources */,
 				9B6860441DAB464D001EC9FF /* OptEntity.m in Sources */,
-				9B85CC8B1DAE362A00E347B9 /* RxWebViewNavigationViewController.m in Sources */,
 				9B6860371DAB3E06001EC9FF /* SPFoundViewController.m in Sources */,
 				9B68600E1DAB385F001EC9FF /* OptDao.m in Sources */,
 				9B68603B1DAB3E06001EC9FF /* SPTabBarController.m in Sources */,
 				9B68603D1DAB3E06001EC9FF /* SPMeViewController.m in Sources */,
 				9B68600C1DAB385F001EC9FF /* SPDBManager.m in Sources */,
 				9B85CC701DAC894A00E347B9 /* SPHttp.m in Sources */,
-				9B85CC741DAE09C900E347B9 /* SPWebViewController.m in Sources */,
 				9B6860381DAB3E06001EC9FF /* AppDelegate.m in Sources */,
 				9B685FF21DAA4FCE001EC9FF /* StatisticInfo.m in Sources */,
-				9B85CC891DAE362A00E347B9 /* NJKWebViewProgressView.m in Sources */,
 				9B68600D1DAB385F001EC9FF /* BaseDBDao.m in Sources */,
 				9B68603E1DAB3E06001EC9FF /* SPSubscribeViewController.m in Sources */,
 				9B68603F1DAB3E06001EC9FF /* SPTopicViewController.m in Sources */,
-				9B85CC851DAE362A00E347B9 /* UIImage+SPExtension.m in Sources */,
 				9B68603A1DAB3E06001EC9FF /* SPNavigationController.m in Sources */,
 				9B68603C1DAB3E06001EC9FF /* main.m in Sources */,
-				9B85CC881DAE362A00E347B9 /* NJKWebViewProgress.m in Sources */,
 				9BA553E91D9E31EE0043E97E /* Sparta.xcdatamodeld in Sources */,
-				9B85CC8A1DAE362A00E347B9 /* RxWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

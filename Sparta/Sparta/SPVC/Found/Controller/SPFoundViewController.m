@@ -7,7 +7,6 @@
 //
 
 #import "SPFoundViewController.h"
-#import "SPWebViewController.h"
 
 @interface SPFoundViewController ()
 
@@ -19,8 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNav];
-    SPWebViewController* web = [[SPWebViewController alloc] initWithUrl:[NSURL URLWithString:@"http://mp.weixin.qq.com/s?__biz=MjM5NjAxNTY0MA==&mid=2651591330&idx=1&sn=18916ebe4d4a16835b17c3ce80fae821&chksm=bd1709d58a6080c3e337e9d86a4bdf20cc649586e7d4b184d3dfb68b7c777d135556f236847a&scene=0#wechat_redirect"]];
-    [self.navigationController pushViewController:web animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
